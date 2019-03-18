@@ -1,8 +1,10 @@
 all: README.md
 
 README.md: guessinggame.sh
-	echo "## Unix Workbench course assignment" > README.md
-	echo -e "\nGuessing game" >> README.md
+	bold=$(tput bold)
+	normal=$(tput sgr0)
+	echo "${bold}Unix Workbench course assignment" > README.md
+	echo -e "\n${bold}Guessing game" >> README.md
 #	touch README.md
 	echo "**Title**: Peer-graded Assignment: Bash, Make, Git and GitHub" >> README.md
 	stat makefile >> README.md
